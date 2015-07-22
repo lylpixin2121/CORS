@@ -33,3 +33,5 @@ withCredentials是XHR2 新增的一个属性，一般可以用做特性检测上
 IE下目前解决跨域问题，采用的是windowName的方式，实现的原理，围绕着一句话：
 
 window.name 的美妙之处：name 值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）。name 在浏览器环境中是一个全局/window对象的属性，且当在 frame 中加载新页面时，name 的属性值依旧保持不变
+
+参考链接如下：http://www.2cto.com/Article/201504/395206.html
