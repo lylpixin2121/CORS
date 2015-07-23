@@ -16,25 +16,30 @@
 Firefox、chrome等浏览器 均是使用 window.XMLHttpRequestl来创建XHR对象
 IE是采用ActiveXObject的方式来创建XHR对象
 
-2、建立连接 xhr.open(method,url,,boolean)
+2、建立连接 
+
+  xhr.open(method,url,,boolean)
+  
 其中 method 参数 表示请求的类型 可以为GET请求或者是POST请求
 url 代表请求的地址
 boolean 代表是否异步 ，默认是false，true表示开启异步
 
 3、添加请求成功的回调函数
-xhr.onreadystatechange=callback;
+  
+  xhr.onreadystatechange=callback;
 
-function callback(){
-  if(xhr.readyState == 4 && xhr.status == 200){
-    alert(xhr.responseText)
+  function callback(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+      alert(xhr.responseText)
+    }
   }
-}
 
 4、发送请求
 xhr.send();
 其中send允许传入一个参数，如果是GET方法 直接传入null，如果是POST方法 可以把需要传到后台的参数通过名值对形式的字符串传入其中
 其中需要注意的一点就是 如果是POST请求还要在send之前 发送一个请求头文件到服务器端 告诉他要解析的文本类型，格式如下：
-xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+
+  xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 
 
 #### 同域ajax请求
